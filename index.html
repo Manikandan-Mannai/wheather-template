@@ -1,0 +1,28 @@
+<html>
+    <body>
+    </body>
+
+<div class="weatherWidget" ></div>
+
+<script>
+   window.weatherWidgetConfig =  window.weatherWidgetConfig || [];
+   window.weatherWidgetConfig.push({
+       selector:".weatherWidget",
+       apiKey:"CDW4TJ788BGQJSPEG4FWDCF8R", 
+       location:"Trichy,INDIA", 
+       unitGroup:"metric", 
+       forecastDays:5, 
+ 
+       showTitle:true, 
+       showConditions:true
+   });
+  
+   (function() {
+   var d = document, s = d.createElement('script');
+   s.src = 'https://www.visualcrossing.com/widgets/forecast-simple/weather-forecast-widget-simple.js';
+   console.log(s);
+   s.setAttribute('data-timestamp', +new Date());
+   (d.head || d.body).appendChild(s);
+   })();
+</script>
+</html>
